@@ -1,164 +1,71 @@
-var friendsArr = [
+// DATA
+// Creating an array to hold the survey data that is used to match friends; starting with dummy data
+var friendsArray = [
 	{
-	"name": "Starlord",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"5",
-	"2",
-	"3",
-	"4",
-	"2",
-	"4",
-	"1",
-	"3",
-	"5",
-	"4"
-	]
+		name: "Tommy",
+		photo: "https://thebiglead.com/2015/03/27/tommy-boy-is-20-years-old-here-are-20-fun-facts-about-the-moviehttp://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/9f846717-acf1-4558-b8be-7ec9286d5634/Image677d798f7da8c71afec323bd1bdf32d0/alg-tommy-boy-jpg1.jpg/",
+		scores: [
+			"5",
+			"5",
+			"3",
+			"3",
+			"4",
+			"4",
+			"3",
+			"3",
+			"5",
+			"4"
+		]
 	},
 	{
-	"name": "The Rock",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"5",
-	"5",
-	"4",
-	"2",
-	"3",
-	"1",
-	"4",
-	"5",
-	"2",
-	"5"
-	]
+		name: "Peter",
+		photo: "https://upload.wikimedia.org/wikipedia/en/5/51/Peter_GB1.jpg",
+		scores: [
+			"5",
+			"2",
+			"2",
+			"2",
+			"2",
+			"2",
+			"2",
+			"2",
+			"2",
+			"2"
+		]
 	},
 	{
-	"name": "Michael",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"2",
-	"4",
-	"1",
-	"2",
-	"2",
-	"1",
-	"2",
-	"5",
-	"5",
-	"3"
-	]
+		name: "Happy",
+		photo: "https://thebrag.com/adam-sandler-happy-gilmore/",
+		scores: [
+			"5",
+			"3",
+			"2",
+			"2",
+			"4",
+			"4",
+			"5",
+			"2",
+			"5",
+			"2"
+		]
 	},
 	{
-	"name": "Joe",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"1",
-	"5",
-	"5",
-	"1",
-	"4",
-	"3",
-	"2",
-	"2",
-	"5",
-	"3"
-	]
-	},
-	{
-	"name": "Chrissy",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"4",
-	"3",
-	"2",
-	"3",
-	"4",
-	"1",
-	"3",
-	"5",
-	"5",
-	"2"
-	]
-	},
-	{
-	"name": "Steve",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"5",
-	"4",
-	"1",
-	"2",
-	"3",
-	"1",
-	"4",
-	"3",
-	"2",
-	"5"
-	]
-	},
-	{
-	"name": "Derek",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"3",
-	"2",
-	"4",
-	"3",
-	"2",
-	"4",
-	"5",
-	"5",
-	"2",
-	"4"
-	]
-	},
-	{
-	"name": "Oprah",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"1",
-	"4",
-	"5",
-	"2",
-	"2",
-	"5",
-	"2",
-	"4",
-	"3",
-	"4"
-	]
-	},
-	{
-	"name": "Derek Haworth",
-	"photo": "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAzNAAAAJDk4YmFiODRmLTRmYTUtNGU1NC1hMThmLTM1OTExNTcwYTdlYQ.jpg",
-	"answers[]": [
-	"2",
-	"2",
-	"4",
-	"3",
-	"3",
-	"3",
-	"3",
-	"3",
-	"3",
-	"1"
-	]
-	},
-	{
-	"name": "Burt Macklin",
-	"photo": "https://vignette.wikia.nocookie.net/parksandrecreation/images/e/ea/Burt_Macklin.png/revision/latest?cb=20130520202236",
-	"answers[]": [
-	"3",
-	"2",
-	"5",
-	"2",
-	"3",
-	"5",
-	"4",
-	"5",
-	"1",
-	"2"
-	]
+		name: "Clark",
+		photo: "https://vacation.fandom.com/wiki/Clark_Griswold",
+		scores: [
+			"5",
+			"3",
+			"1",
+			"1",
+			"5",
+			"5",
+			"1",
+			"2",
+			"4",
+			"2"
+		]
 	}
-	]
+];
 
-module.exports = friendsArr;
+//Exporting the array so that it is accessible to other files using require
+module.exports = friendsArray;

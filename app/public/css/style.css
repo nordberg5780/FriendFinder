@@ -1,14 +1,12 @@
-#submitButton {
-	width: 100%;
-	margin: 25px 0;
-	line-height: 200%;
+body {
+	background-color: #aea79f !important;
 }
 
-h3 {
-	font-weight: bold;
-	color: #ff0000;
+.main-jumbo {
+	/* background-image: URL("../images/friends.jpg"); */
+	background-size: cover;
 }
 
-p {
-	font-size: 1.25em;
+.survey-btn {
+	background-color: #e95420;
 }
