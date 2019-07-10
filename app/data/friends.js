@@ -3,7 +3,7 @@
 var friendsArray = [
 	{
 		name: "Tommy",
-		photo: "https://thebiglead.com/2015/03/27/tommy-boy-is-20-years-old-here-are-20-fun-facts-about-the-moviehttp://cdn.app.compendium.com/uploads/user/e7c690e8-6ff9-102a-ac6d-e4aebca50425/9f846717-acf1-4558-b8be-7ec9286d5634/Image677d798f7da8c71afec323bd1bdf32d0/alg-tommy-boy-jpg1.jpg/",
+		photo: "https://milwaukeerecord.com/wp-content/uploads/2018/01/TommyBoyScreening.jpg",
 		scores: [
 			"5",
 			"5",
@@ -35,7 +35,7 @@ var friendsArray = [
 	},
 	{
 		name: "Happy",
-		photo: "https://thebrag.com/adam-sandler-happy-gilmore/",
+		photo: "https://thebrag.com/wp-content/uploads/2018/01/Happy-Gilmore-2-e1517352463131.jpg",
 		scores: [
 			"5",
 			"3",
@@ -51,7 +51,7 @@ var friendsArray = [
 	},
 	{
 		name: "Clark",
-		photo: "https://vacation.fandom.com/wiki/Clark_Griswold",
+		photo: "https://www.thedad.com/wp-content/uploads/2018/01/clark-griswold.png?w=620",
 		scores: [
 			"5",
 			"3",
@@ -64,7 +64,24 @@ var friendsArray = [
 			"4",
 			"2"
 		]
-	}
+	},
+
+	{
+		"name": "123",
+		"photo": "132",
+		"scores": [
+		"1",
+		"1",
+		"1",
+		"1",
+		"1",
+		"1",
+		"1",
+		"1",
+		"1",
+		"1"
+		]
+		}
 ];
 
 //Exporting the array so that it is accessible to other files using require
