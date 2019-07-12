@@ -2,12 +2,12 @@
 Node and Express Servers 
 
 Lucky Individuals Scores
-<ul>
-5533443354 
-5144512541
-5322445252
-5311551242
-</ul>
+
+* 5533443354 
+* 5144512541
+* 5322445252
+* 5311551242
+
 
 <h3>Overview</h3>
 
